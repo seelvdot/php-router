@@ -1,0 +1,31 @@
+//-- Sizes --//
+$xs: 576;
+$sm: 768;
+$md: 992;
+$lg: 1200;
+
+@mixin clsBorderRadius($topleft,$topright,$bottomright,$bottomleft){
+    border-radius: $topleft+px $topright+px $bottomright+px $bottomleft+px;
+}
+@mixin clsPadding($top, $right, $bottom, $left){
+    padding: $top+px $right+px $bottom+px $left+px;
+}
+@mixin clsMargin($top, $right, $bottom, $left){
+    margin: $top+px $right+px $bottom+px $left+px;
+}
+@mixin clsTransition($property,$time){
+    -webkit-transition: $property $time+s;
+    -moz-transition: $property $time+s;
+    -ms-transition: $property $time+s;
+    -o-transition: $property $time+s;
+    transition: $property $time+s;
+}
+@mixin clsFontSize($sizefont){
+    $size: $sizefont / 16;
+    font-size: $size+em;
+    font-size: $sizefont+px;
+}
+@mixin clsBoxShadow($hLength,$vLength,$blur,$spread,$color){
+    -webkit-box-shadow: $hLength $vLength $blur+px $spread+px $color;
+    box-shadow: $hLength+px $vLength+px $blur+px $spread+px $color;
+}
